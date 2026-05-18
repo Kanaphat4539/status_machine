@@ -2,7 +2,7 @@
    script.js — statusMachine LIFF App
    ============================================================ */
 
-const GAS_URL = 'https://script.google.com/macros/s/AKfycby9CDkIx4iLUKoyvCuD9h-gK-D6lhO6Q87KYX4dV3Zha_Y0s5yFVpxbTk6e93l6wTuvJQ/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwK8HXVurwBnT-uk4Wx5bwz-4D-m0pTY9JBL8abrM2DFx1HXCWDwOV8dwF62iPIaJ-3gA/exec';
 const LIFF_ID = '2010082961-A6MMdNxg';
 
 let machineData = []; // Array of machines from backend
