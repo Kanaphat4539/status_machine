@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Machine Status | LoadAlert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-core"></div>
+        </div>
+        <div class="loading-text">CONNECTING TO MACHINES...</div>
+    </div>
+
+    <div id="app" class="app-container hidden">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-icon">⚙️</div>
+                <div class="header-titles">
+                    <h1>LIVE STATUS</h1>
+                    <span>สถานะการทำงานของเครื่องจักร</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="btn-refresh" class="btn-icon" onclick="loadMachineStatus()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Machine Overview Grid -->
+        <div id="machine-grid" class="machine-grid">
+            <!-- Machine cards injected here via JS -->
+        </div>
+    </div>
+
+    <!-- SP Details Modal -->
+    <div id="sp-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h2 id="modal-machine-title">PK--</h2>
+                    <span>สถานะหัวจ่าย (Spout 1-8)</span>
+                </div>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div id="sp-grid" class="sp-grid">
+                    <!-- 8 SP cards injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
